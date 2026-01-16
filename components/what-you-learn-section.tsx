@@ -72,7 +72,7 @@ export default function WhatYouLearnSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-0">
               {[
                 { title: "Color Schemes", image: "8.jpg" },
                 { title: "Space Planning", image: "9.jpg" },
@@ -85,13 +85,13 @@ export default function WhatYouLearnSection() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="group relative bg-white rounded-xl overflow-hidden shadow-lg shadow-[#0A3D91]/10 hover:shadow-xl hover:shadow-[#0A3D91]/20 transition-all duration-300"
+                  className="group relative overflow-hidden"
                 >
-                  <div className="relative h-[300px]">
+                  <div className="relative aspect-square">
                     <img
                       src={`/images/${preview.image}`}
                       alt={preview.title}
-                      className="w-full h-full object-contain bg-white"
+                      className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A3D91]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
